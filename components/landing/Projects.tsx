@@ -27,13 +27,6 @@ const projects = [
     link: 'https://crm.digital-dreams.dev/',
     picture: '/img/crmbot.png',
   },
-  {
-    title: 'Weather Dashboard',
-    description: 'Real-time weather information app using OpenWeatherMap API.',
-    technologies: ['React', 'Chart.js', 'API integration'],
-    link: '#',
-    picture: '/placeholder.svg',
-  },
 ];
 
 export default function Projects() {
@@ -43,7 +36,7 @@ export default function Projects() {
         <h2 className="text-3xl font-bold mb-12 text-center">Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
-            <Card key={project.title} className="flex flex-col h-full">
+            <Card key={project.title} className="flex flex-col h-full ">
               <CardHeader>
                 <CardTitle>{project.title}</CardTitle>
                 <CardDescription>{project.description}</CardDescription>
