@@ -17,7 +17,7 @@ export default function Footer() {
             <span className="sr-only">GitHub</span>
           </Link>
           <Link
-            href="#"
+            href="https://www.linkedin.com/in/diana-cruzx2/"
             className="text-muted-foreground hover:text-primary transition-colors"
           >
             <Linkedin className="h-6 w-6" />

@@ -13,6 +13,15 @@ const skills = [
     name: 'Responsive Design',
     description: 'Creating mobile-friendly layouts',
   },
+  { name: 'Axios', description: 'Promise-based HTTP client for API requests' },
+  {
+    name: 'Node.js',
+    description: 'JavaScript runtime for building server-side applications',
+  },
+  {
+    name: 'UI/UX',
+    description: 'Designing intuitive and user-friendly interfaces',
+  },
 ];
 
 export default function Skills() {
@@ -22,9 +31,12 @@ export default function Skills() {
         <h2 className="text-3xl font-bold mb-12 text-center">Skills</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skills.map((skill) => (
-            <Card key={skill.name}>
+            <Card
+              key={skill.name}
+              className="transition-transform transform hover:scale-105 hover:shadow-lg"
+            >
               <CardHeader>
-                <CardTitle>{skill.name}</CardTitle>
+                <CardTitle className="text-2xl">{skill.name}</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">{skill.description}</p>

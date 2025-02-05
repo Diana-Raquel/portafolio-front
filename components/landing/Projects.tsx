@@ -43,7 +43,7 @@ export default function Projects() {
         <h2 className="text-3xl font-bold mb-12 text-center">Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
-            <Card key={project.title} className="flex flex-col">
+            <Card key={project.title} className="flex flex-col h-full">
               <CardHeader>
                 <CardTitle>{project.title}</CardTitle>
                 <CardDescription>{project.description}</CardDescription>
@@ -55,7 +55,7 @@ export default function Projects() {
                   className="rounded-lg"
                 />
               </CardHeader>
-              <CardContent className="flex-grow">
+              <CardContent className="flex-grow flex flex-col justify-between">
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
                     <span
@@ -67,7 +67,7 @@ export default function Projects() {
                   ))}
                 </div>
               </CardContent>
-              <CardFooter>
+              <CardFooter className="mt-auto">
                 <Button asChild>
                   <Link href={project.link}>View Project</Link>
                 </Button>
