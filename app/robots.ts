@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['*/admin/*', '*/api/*'],
     },
-    sitemap: 'https://nextjs.org/sitemap.xml',
+    sitemap: 'https://cruzcruzx2-portafolio.vercel.app/sitemap.xml',
   };
 }
