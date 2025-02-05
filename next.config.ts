@@ -1,4 +1,4 @@
-/ @type {import('next').NextConfig} */;
+/** @type {import('next').NextConfig} */
 
 const nextConfig = {
   // ? INFO: Uncomment this line if you want to use the standalone mode (Docker)
@@ -7,7 +7,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: '',
+        hostname: '**',
         port: '',
         pathname: '**',
       },
