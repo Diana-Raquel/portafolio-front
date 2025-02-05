@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter } from 'lucide-react';
+import { Github, Gitlab, Linkedin } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Footer() {
@@ -24,11 +24,11 @@ export default function Footer() {
             <span className="sr-only">LinkedIn</span>
           </Link>
           <Link
-            href="#"
+            href="https://gitlab.com/Diana-Raquel"
             className="text-muted-foreground hover:text-primary transition-colors"
           >
-            <Twitter className="h-6 w-6" />
-            <span className="sr-only">Twitter</span>
+            <Gitlab className="h-6 w-6" />
+            <span className="sr-only">GitLab</span>
           </Link>
         </div>
       </div>

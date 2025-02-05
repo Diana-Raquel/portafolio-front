@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Hero() {
@@ -6,6 +7,16 @@ export default function Hero() {
     <section className="py-20 px-4 md:px-6 text-center">
       <div className="container mx-auto max-w-3xl">
         <h1 className="text-4xl md:text-5xl font-bold mb-6">Diana Cruz</h1>
+        <div className="flex justify-center pb-8">
+          <Image
+            src="/img/photocv.jpg"
+            width={200}
+            height={200}
+            alt="Diana Cruz - Portafolio"
+            className="rounded-full"
+          />
+        </div>
+
         <h2 className="text-2xl md:text-3xl text-muted-foreground mb-8">
           Frontend Web Developer
         </h2>
