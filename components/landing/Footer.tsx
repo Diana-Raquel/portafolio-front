@@ -1,5 +1,7 @@
-import { Github, Gitlab, Linkedin } from 'lucide-react';
+import { Gitlab } from 'lucide-react';
 import Link from 'next/link';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 export default function Footer() {
   return (
@@ -13,14 +15,14 @@ export default function Footer() {
             href="https://github.com/Diana-Raquel/"
             className="text-muted-foreground hover:text-primary transition-colors"
           >
-            <Github className="h-6 w-6" />
+            <GitHubIcon className="h-6 w-6" />
             <span className="sr-only">GitHub</span>
           </Link>
           <Link
             href="https://www.linkedin.com/in/diana-cruzx2/"
             className="text-muted-foreground hover:text-primary transition-colors"
           >
-            <Linkedin className="h-6 w-6" />
+            <LinkedInIcon className="h-6 w-6" />
             <span className="sr-only">LinkedIn</span>
           </Link>
           <Link

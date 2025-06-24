@@ -1,26 +1,76 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const skills = [
-  { name: 'React', description: 'Building interactive UIs' },
+  {
+    name: 'React',
+    description: 'Used to build fast, modular, and dynamic user interfaces.',
+  },
   {
     name: 'Next.js',
-    description: 'Server-side rendering and static site generation',
+    description: 'Enables SSR, routing, and optimized web performance.',
   },
-  { name: 'Tailwind CSS', description: 'Rapid UI development' },
-  { name: 'TypeScript', description: 'Type-safe JavaScript development' },
-  { name: 'Git', description: 'Version control and collaboration' },
+  {
+    name: 'Tailwind CSS',
+    description: 'Streamlines UI styling with utility-first CSS classes.',
+  },
+  {
+    name: 'TypeScript',
+    description: 'Improves code reliability with static typing in large apps.',
+  },
+  {
+    name: 'Git',
+    description: 'Manages code changes and team collaboration efficiently.',
+  },
   {
     name: 'Responsive Design',
-    description: 'Creating mobile-friendly layouts',
+    description: 'Ensures consistent UX across mobile, tablet, and desktop.',
   },
-  { name: 'Axios', description: 'Promise-based HTTP client for API requests' },
+  {
+    name: 'CSS',
+    description: 'Styles and visually structures web interfaces.',
+  },
+  {
+    name: 'Axios',
+    description: 'Handles API requests and async data fetching.',
+  },
   {
     name: 'Node.js',
-    description: 'JavaScript runtime for building server-side applications',
+    description: 'Runs backend logic and APIs using JavaScript.',
   },
   {
     name: 'UI/UX',
-    description: 'Designing intuitive and user-friendly interfaces',
+    description: 'Shapes intuitive and accessible user experiences.',
+  },
+  {
+    name: 'ShadCn',
+    description: 'Provides accessible and customizable UI components.',
+  },
+  {
+    name: 'Ant Design',
+    description:
+      'Delivers prebuilt UI components for dashboards and admin panels.',
+  },
+  {
+    name: 'TanStack',
+    description: 'Manages data, tables, and virtualization in complex UIs.',
+  },
+  {
+    name: 'i18n',
+    description: 'Enables language and regional adaptation in the application.',
+  },
+  { name: 'Vite', description: 'Fast bundler for modern frontend projects.' },
+  {
+    name: 'ESLint',
+    description: 'Static code analysis to enforce quality and style.',
+  },
+  {
+    name: 'Prettier',
+    description: 'Code formatter to ensure consistency across the codebase.',
+  },
+  {
+    name: 'Husky',
+    description:
+      'Automates checks and tasks using Git hooks before each commit or push.',
   },
 ];
 

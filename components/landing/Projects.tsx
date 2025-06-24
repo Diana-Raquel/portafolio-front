@@ -27,6 +27,30 @@ const projects = [
     link: 'https://crm.digital-dreams.dev/',
     picture: '/img/crmbot.png',
   },
+  {
+    title: 'Pokemon UI',
+    description:
+      'Interface that consumes the public Pokémon API to display a detailed gallery of Pokémon. It shows stats, abilities, types, and allows dynamic navigation between different creatures.',
+    technologies: ['React.js', 'Node.js', 'Tailwind CSS', 'Typescript'],
+    link: 'https://pokemon-front-virid.vercel.app/',
+    picture: '/img/pokemon.png',
+  },
+  {
+    title: 'Counter App',
+    description:
+      'Application that counts the length of an entered text and estimates the approximate reading time.',
+    technologies: ['React.js', 'Node.js', 'CSS', 'Typescript'],
+    link: 'https://counter-app-one-blue.vercel.app/',
+    picture: '/img/counterapp.png',
+  },
+  {
+    title: 'Countries App',
+    description:
+      'Application that allows filtering countries by continent and viewing detailed information of the selected country, including population, capital, flag, and region.',
+    technologies: ['React.js', 'Node.js', 'CSS', 'Typescript'],
+    link: 'https://countries-blush-nine.vercel.app/',
+    picture: '/img/countries.png',
+  },
 ];
 
 export default function Projects() {
