@@ -1,4 +1,3 @@
-import Footer from '@/components/landing/Footer';
 import Header from '@/components/landing/Header';
 import Hero from '@/components/landing/Hero';
 import Projects from '@/components/landing/Projects';
@@ -14,7 +13,6 @@ export default function Home() {
         <Projects />
         {/* <Contact /> */}
       </main>
-      <Footer />
     </div>
   );
 }

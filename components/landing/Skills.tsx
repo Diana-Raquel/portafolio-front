@@ -11,7 +11,7 @@ const skills = [
   },
   {
     name: 'Tailwind CSS',
-    image: '/img/tailwind.svg',
+    image: '/img/tailwind.png',
   },
   {
     name: 'TypeScript',
@@ -27,6 +27,7 @@ const skills = [
   },
   {
     name: 'Axios',
+    image: '/img/axios.png',
   },
   {
     name: 'Node.js',
@@ -40,10 +41,7 @@ const skills = [
     name: 'Ant Design',
     image: '/img/ant.png',
   },
-  {
-    name: 'TanStack',
-  },
-  { name: 'Vite' },
+  { name: 'Vite', image: '/img/vite.png' },
   {
     name: 'ESLint',
     image: '/img/ESLint.svg.png',
