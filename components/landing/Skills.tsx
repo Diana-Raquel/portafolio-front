@@ -4,51 +4,67 @@ const skills = [
   {
     name: 'React',
     image: '/img/react.png',
+    gradient: 'from-[#3b9bbd] to-[#276d84]', // azul oscuro react
   },
   {
     name: 'Next.js',
     image: '/img/nextjs.svg',
+    gradient: 'from-[#1a1a1a] to-[#2e2e2e]',
   },
   {
     name: 'Tailwind CSS',
     image: '/img/tailwind.png',
+    gradient: 'from-[#1994b7] to-[#0f6485]',
   },
   {
     name: 'TypeScript',
     image: '/img/typescript.svg.webp',
+    gradient: 'from-[#245d9c] to-[#1c4471]',
   },
   {
     name: 'Git',
     image: '/img/git.svg',
+    gradient: 'from-[#b83a2f] to-[#912a23]',
   },
   {
     name: 'CSS',
     image: '/img/css-3.svg',
+    gradient: 'from-[#1d59c3] to-[#123e8a]',
   },
   {
     name: 'Axios',
     image: '/img/axios.png',
+    gradient: 'from-[#6b3cd2] to-[#4b2a9b]',
   },
   {
     name: 'Node.js',
     image: '/img/node.png',
+    gradient: 'from-[#2f6930] to-[#1e4620]',
   },
   {
     name: 'ShadCn',
     image: '/img/shadcn.png',
+    gradient: 'from-[#0f0f0f] to-[#2b2b2b]',
   },
   {
     name: 'Ant Design',
     image: '/img/ant.png',
+    gradient: 'from-[#1f71c3] to-[#15539e]',
   },
-  { name: 'Vite', image: '/img/vite.png' },
+  {
+    name: 'Vite',
+    image: '/img/vite.png',
+    gradient: 'from-[#cc7c16] to-[#a24c13]',
+  },
   {
     name: 'ESLint',
     image: '/img/ESLint.svg.png',
+    gradient: 'from-[#5d3ac4] to-[#3e248a]',
   },
   {
     name: 'Prettier',
     image: '/img/prettier.png',
+    gradient: 'from-[#a87335] to-[#6c4b23]',
   },
 ];
 
@@ -61,18 +77,25 @@ export default function Skills() {
           {skills.map((skill) => (
             <Card
               key={skill.name}
-              className="transition-transform transform hover:scale-105 hover:shadow-lg"
+              className={`transition-transform transform hover:scale-105 hover:shadow-lg text-white`}
+              style={{
+                backgroundImage: `linear-gradient(to right, var(--tw-gradient-stops))`,
+              }}
             >
-              <CardHeader className="flex flex-row items-center gap-4">
-                {skill.image && (
-                  <img
-                    src={skill.image}
-                    alt={skill.name}
-                    className="w-18 h-12 object-contain"
-                  />
-                )}
-                <CardTitle className="text-xl">{skill.name}</CardTitle>
-              </CardHeader>
+              <div
+                className={`bg-gradient-to-r ${skill.gradient} rounded  bg-opacity-90 backdrop-brightness-150`}
+              >
+                <CardHeader className="flex flex-row items-center gap-4">
+                  {skill.image && (
+                    <img
+                      src={skill.image}
+                      alt={skill.name}
+                      className="w-18 h-12 object-contain bg-white rounded p-1"
+                    />
+                  )}
+                  <CardTitle className="text-xl">{skill.name}</CardTitle>
+                </CardHeader>
+              </div>
             </Card>
           ))}
         </div>
