@@ -1,76 +1,56 @@
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardHeader, CardTitle } from '@/components/ui/card';
 
 const skills = [
   {
     name: 'React',
-    description: 'Used to build fast, modular, and dynamic user interfaces.',
+    image: '/img/react.png',
   },
   {
     name: 'Next.js',
-    description: 'Enables SSR, routing, and optimized web performance.',
+    image: '/img/nextjs.svg',
   },
   {
     name: 'Tailwind CSS',
-    description: 'Streamlines UI styling with utility-first CSS classes.',
+    image: '/img/tailwind.svg',
   },
   {
     name: 'TypeScript',
-    description: 'Improves code reliability with static typing in large apps.',
+    image: '/img/typescript.svg.webp',
   },
   {
     name: 'Git',
-    description: 'Manages code changes and team collaboration efficiently.',
-  },
-  {
-    name: 'Responsive Design',
-    description: 'Ensures consistent UX across mobile, tablet, and desktop.',
+    image: '/img/git.svg',
   },
   {
     name: 'CSS',
-    description: 'Styles and visually structures web interfaces.',
+    image: '/img/css-3.svg',
   },
   {
     name: 'Axios',
-    description: 'Handles API requests and async data fetching.',
   },
   {
     name: 'Node.js',
-    description: 'Runs backend logic and APIs using JavaScript.',
-  },
-  {
-    name: 'UI/UX',
-    description: 'Shapes intuitive and accessible user experiences.',
+    image: '/img/node.png',
   },
   {
     name: 'ShadCn',
-    description: 'Provides accessible and customizable UI components.',
+    image: '/img/shadcn.png',
   },
   {
     name: 'Ant Design',
-    description:
-      'Delivers prebuilt UI components for dashboards and admin panels.',
+    image: '/img/ant.png',
   },
   {
     name: 'TanStack',
-    description: 'Manages data, tables, and virtualization in complex UIs.',
   },
-  {
-    name: 'i18n',
-    description: 'Enables language and regional adaptation in the application.',
-  },
-  { name: 'Vite', description: 'Fast bundler for modern frontend projects.' },
+  { name: 'Vite' },
   {
     name: 'ESLint',
-    description: 'Static code analysis to enforce quality and style.',
+    image: '/img/ESLint.svg.png',
   },
   {
     name: 'Prettier',
-    description: 'Code formatter to ensure consistency across the codebase.',
-  },
-  {
-    name: 'Husky',
-    description:
-      'Automates checks and tasks using Git hooks before each commit or push.',
+    image: '/img/prettier.png',
   },
 ];
 
@@ -79,18 +59,22 @@ export default function Skills() {
     <section id="skills" className="py-20 px-4 md:px-6 bg-muted/50">
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold mb-12 text-center">Skills</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
           {skills.map((skill) => (
             <Card
               key={skill.name}
               className="transition-transform transform hover:scale-105 hover:shadow-lg"
             >
-              <CardHeader>
-                <CardTitle className="text-2xl">{skill.name}</CardTitle>
+              <CardHeader className="flex flex-row items-center gap-4">
+                {skill.image && (
+                  <img
+                    src={skill.image}
+                    alt={skill.name}
+                    className="w-18 h-12 object-contain"
+                  />
+                )}
+                <CardTitle className="text-xl">{skill.name}</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">{skill.description}</p>
-              </CardContent>
             </Card>
           ))}
         </div>
