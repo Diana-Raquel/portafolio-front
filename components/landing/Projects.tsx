@@ -76,6 +76,19 @@ const projects = [
     link: 'https://countries-blush-nine.vercel.app/',
     picture: '/img/countries.png',
   },
+  {
+    title: 'Dilujo',
+    description:
+      'Online jewelry store that offers an elegant experience to explore and discover unique products by category, style, and more. It includes features such as shopping cart, detailed product view, and full admin panel management.',
+    technologies: [
+      { name: 'Next.js', icon: '/img/nextjs.svg' },
+      { name: 'Tailwind.js', icon: '/img/tailwind.png' },
+      { name: 'Ant Design', icon: '/img/ant.png' },
+      { name: 'Typescript', icon: '/img/typescript.svg.webp' },
+    ],
+    link: 'https://dilujo-web.vercel.app/en',
+    picture: '/img/dilujo.png',
+  },
 ];
 
 export default function Projects() {
@@ -118,7 +131,7 @@ export default function Projects() {
 
               <CardFooter className="mt-auto">
                 <Button asChild>
-                  <Link href={project.link}>View Project</Link>
+                  <Link href={project.link}>View Demo</Link>
                 </Button>
               </CardFooter>
             </Card>
