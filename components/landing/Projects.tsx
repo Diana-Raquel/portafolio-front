@@ -15,7 +15,12 @@ const projects = [
     title: 'Pensum UCA',
     description:
       'Curriculum administration site of the José Simeón Cañas University (UCA)',
-    technologies: ['React', 'Node.js', 'Tailwind CSS', 'Next.ui'],
+    technologies: [
+      { name: 'React.js', icon: '/img/react.png' },
+      { name: 'Tailwind CSS', icon: '/img/tailwind.png' },
+      { name: 'Node.js', icon: '/img/node.png' },
+      { name: 'Next', icon: '/img/nextjs.svg' },
+    ],
     link: 'https://fia.uca.edu.sv/pensum/login',
     picture: '/img/pensum.webp',
   },
@@ -23,7 +28,12 @@ const projects = [
     title: 'CRM-Bot',
     description:
       'Customer relationship management system for a digital agency.',
-    technologies: ['Next.js', 'Node.js', 'Tailwind CSS', 'Shadcn'],
+    technologies: [
+      { name: 'Next.js', icon: '/img/nextjs.svg' },
+      { name: 'Node.js', icon: '/img/node.png' },
+      { name: 'Tailwind CSS', icon: '/img/tailwind.png' },
+      { name: 'Shadcn', icon: '/img/shadcn.png' },
+    ],
     link: 'https://crm.digital-dreams.dev/',
     picture: '/img/crmbot.png',
   },
@@ -31,7 +41,12 @@ const projects = [
     title: 'Pokemon UI',
     description:
       'Interface that consumes the public Pokémon API to display a detailed gallery of Pokémon. It shows stats, abilities, types, and allows dynamic navigation between different creatures.',
-    technologies: ['React.js', 'Node.js', 'Tailwind CSS', 'Typescript'],
+    technologies: [
+      { name: 'React.js', icon: '/img/react.png' },
+      { name: 'Node.js', icon: '/img/node.png' },
+      { name: 'Tailwind CSS', icon: '/img/tailwind.png' },
+      { name: 'Typescript', icon: '/img/typescript.svg.webp' },
+    ],
     link: 'https://pokemon-front-virid.vercel.app/',
     picture: '/img/pokemon.png',
   },
@@ -39,7 +54,12 @@ const projects = [
     title: 'Counter App',
     description:
       'Application that counts the length of an entered text and estimates the approximate reading time.',
-    technologies: ['React.js', 'Node.js', 'CSS', 'Typescript'],
+    technologies: [
+      { name: 'React.js', icon: '/img/react.png' },
+      { name: 'Node.js', icon: '/img/node.png' },
+      { name: 'CSS', icon: '/img/css-3.svg' },
+      { name: 'Typescript', icon: '/img/typescript.svg.webp' },
+    ],
     link: 'https://counter-app-one-blue.vercel.app/',
     picture: '/img/counterapp.png',
   },
@@ -47,7 +67,12 @@ const projects = [
     title: 'Countries App',
     description:
       'Application that allows filtering countries by continent and viewing detailed information of the selected country, including population, capital, flag, and region.',
-    technologies: ['React.js', 'Node.js', 'CSS', 'Typescript'],
+    technologies: [
+      { name: 'React.js', icon: '/img/react.png' },
+      { name: 'Node.js', icon: '/img/node.png' },
+      { name: 'CSS', icon: '/img/css-3.svg' },
+      { name: 'Typescript', icon: '/img/typescript.svg.webp' },
+    ],
     link: 'https://countries-blush-nine.vercel.app/',
     picture: '/img/countries.png',
   },
@@ -75,15 +100,22 @@ export default function Projects() {
               <CardContent className="flex-grow flex flex-col justify-between">
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
-                    <span
-                      key={tech}
-                      className="bg-primary/10 text-primary text-sm px-2 py-1 rounded"
+                    <div
+                      key={tech.name}
+                      className="p-1 bg-primary/10 rounded w-8 h-8 relative"
+                      title={tech.name}
                     >
-                      {tech}
-                    </span>
+                      <Image
+                        src={tech.icon}
+                        alt={tech.name}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
                   ))}
                 </div>
               </CardContent>
+
               <CardFooter className="mt-auto">
                 <Button asChild>
                   <Link href={project.link}>View Project</Link>
