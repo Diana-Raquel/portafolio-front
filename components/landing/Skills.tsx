@@ -1,10 +1,8 @@
-import { Card, CardHeader, CardTitle } from '@/components/ui/card';
-
 const skills = [
   {
     name: 'React',
     image: '/img/react.png',
-    gradient: 'from-[#3b9bbd] to-[#276d84]', // azul oscuro react
+    gradient: 'from-[#3b9bbd] to-[#276d84]',
   },
   {
     name: 'Next.js',
@@ -70,34 +68,30 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20 px-4 md:px-6 bg-muted/50">
+    <section className="py-20 px-4 md:px-6 bg-muted/50">
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold mb-12 text-center">Skills</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-          {skills.map((skill) => (
-            <Card
-              key={skill.name}
-              className={`transition-transform transform hover:scale-105 hover:shadow-lg text-white`}
-              style={{
-                backgroundImage: `linear-gradient(to right, var(--tw-gradient-stops))`,
-              }}
-            >
+
+        <div className="bg-[#0f172a]">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 p-6">
+            {skills.map((skill) => (
               <div
-                className={`bg-gradient-to-r ${skill.gradient} rounded  bg-opacity-90 backdrop-brightness-150`}
+                key={skill.name}
+                className={`group relative flex flex-col items-center justify-center bg-gradient-to-r ${skill.gradient} rounded-md p-4 transition-transform transform hover:scale-105`}
               >
-                <CardHeader className="flex flex-row items-center gap-4">
-                  {skill.image && (
-                    <img
-                      src={skill.image}
-                      alt={skill.name}
-                      className="w-18 h-12 object-contain bg-white rounded p-1"
-                    />
-                  )}
-                  <CardTitle className="text-xl">{skill.name}</CardTitle>
-                </CardHeader>
+                <div className="p-2 rounded-md backdrop-blur-sm bg-white/10">
+                  <img
+                    src={skill.image}
+                    alt={skill.name}
+                    className="w-14 h-14 object-contain"
+                  />
+                </div>
+                <span className="absolute bottom-1 translate-y-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 text-xs text-white bg-black/70 px-2 py-0.5 rounded transition-all duration-300">
+                  {skill.name}
+                </span>
               </div>
-            </Card>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
